@@ -7,7 +7,7 @@ const Navigation = () => (
     <div className="links">
       <div className="logo">
         <img src={logo} className="logo-pic" alt="spacehub-logo" />
-        <h1 className="logo-title">Space Travelers&apos Hub</h1>
+        <h1 className="logo-title">Space Travellers Hub</h1>
       </div>
       <ul className="nav-links">
         <li className="nav-link">
