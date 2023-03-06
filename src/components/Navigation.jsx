@@ -10,10 +10,30 @@ const Navigation = () => (
         <h1 className="logo-title">Space Travelers&apos Hub</h1>
       </div>
       <ul className="nav-links">
-        <li className="nav-link"><NavLink className={(linkData) => (linkData.isActive ? 'active-link' : '')}
-            to="/">Rockets</NavLink></li>
-        <li className="nav-link"><NavLink className={(linkData) => (linkData.isActive ? 'active-link' : '')} to="/missions">Missions</NavLink></li>
-        <li className="nav-link"><NavLink className={(linkData) => (linkData.isActive ? 'active-link' : '')} to="/profile">My profile</NavLink></li>
+        <li className="nav-link">
+          <NavLink
+            className={(linkData) => (linkData.isActive ? 'active-link' : '')}
+            to="/"
+          >
+            Rockets
+          </NavLink>
+        </li>
+        <li className="nav-link">
+          <NavLink
+            className={(linkData) => (linkData.isActive ? 'active-link' : '')}
+            to="/missions"
+          >
+            Missions
+          </NavLink>
+        </li>
+        <li className="nav-link">
+          <NavLink
+            className={(linkData) => (linkData.isActive ? 'active-link' : '')}
+            to="/profile"
+          >
+            My profile
+          </NavLink>
+        </li>
       </ul>
     </div>
   </nav>
