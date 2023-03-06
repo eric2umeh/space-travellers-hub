@@ -1,0 +1,44 @@
+@import "./variables.scss";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Navigation
+.nav {
+  height: 100%;
+
+  .nav-links {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .nav-link {
+      a {
+        &:link,
+        &:visited {
+          text-decoration: none;
+          color: $color-grey-2;
+          transition: all 0.2s;
+          font-size: 1.3rem;
+        }
+
+        &:hover,
+        &:active {
+          color: $color-grey-1;
+        }
+
+        &.active-link {
+          color: $color-grey-1;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
