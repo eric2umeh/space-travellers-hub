@@ -16,7 +16,6 @@ export const fetchRocketsData = createAsyncThunk(
       rocket_type: rocket.type,
       rocket_images: rocket.flickr_images,
       rocket_description: rocket.description,
-      reserved: false,
     }));
     return results;
   },
@@ -29,15 +28,7 @@ const initialState = {
 const rockets = createSlice({
   name: 'rockets',
   initialState,
-  reducers: {
-    reserveRocket(state, action) {
-      const newState = state.rockets.map((rocket) => {
-        if (rocket.rocket_id !== action.payload) return rocket;
-        return { ...rocket, reserved: true };
-      });
-      return { rockets: [...newState] };
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchRocketsData.fulfilled, (state, { payload }) => ({
       ...state,
