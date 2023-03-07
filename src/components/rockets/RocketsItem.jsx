@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import './Rockets.css';
+import './RocketsItem.css';
 
 const RocketsItem = ({ item }) => (
   <div className="rocket__info">
