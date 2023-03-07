@@ -14,6 +14,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchRocketsData());
   }, [dispatch]);
+
   return (
     <div>
       <Layout>
