@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
 import axios from 'axios';
 
 export const fetchRocketsData = createAsyncThunk(
@@ -8,7 +7,7 @@ export const fetchRocketsData = createAsyncThunk(
   async () => {
     const response = await axios.get('https://api.spacexdata.com/v3/rockets');
 
-    if (response.status !== 200) return 'An error occured!';
+    if (response.status !== 200) return [];
 
     const { data } = response;
     const results = data.map((rocket) => ({
