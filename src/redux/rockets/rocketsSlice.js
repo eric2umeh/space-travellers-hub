@@ -19,7 +19,7 @@ export const fetchRocketsData = createAsyncThunk(
       rocket_description: rocket.description,
     }));
     return results;
-  }
+  },
 );
 
 const initialState = {
