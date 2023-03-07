@@ -1,21 +1,20 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Rockets from './pages/Rockets';
-import Missions from './pages/Missions';
-import Profile from './pages/Profile';
+import { Routes, Route } from 'react-router-dom';
+import Rockets from './pages/RocketsPage';
+import Missions from './pages/MissionsPage';
+import Profile from './pages/ProfilePage';
+import Layout from './components/layout/Layout';
 import './App.css';
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <Navigation />
+      <Layout>
         <Routes>
           <Route path="/" element={<Rockets />} />
           <Route path="/missions" element={<Missions />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
-      </BrowserRouter>
+      </Layout>
     </div>
   );
 }
