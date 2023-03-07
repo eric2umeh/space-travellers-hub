@@ -1,20 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import Rockets from './pages/rockets/RocketsPage';
 import Missions from './pages/MissionsPage';
 import Profile from './pages/ProfilePage';
 import Layout from './components/layout/Layout';
 import './App.css';
-import { fetchRocketsData } from './redux/rockets/rocketsSlice';
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchRocketsData());
-  }, [dispatch]);
-
   return (
     <div>
       <Layout>
