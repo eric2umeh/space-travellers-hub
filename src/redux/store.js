@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import rockets from './rockets/rocketsSlice';
+import thunk from 'redux-thunk';
+import rocketsSlice from './rockets/rocketsSlice';
 
 const store = configureStore({
   reducer: {
-    rockets: rockets.reducer,
+    rockets: rocketsSlice,
   },
+  middleware: [thunk],
 });
 
 export default store;
