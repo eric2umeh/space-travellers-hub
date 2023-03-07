@@ -1,5 +1,6 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Rockets from './pages/RocketsPage';
+import Rockets from './pages/rockets/RocketsPage';
 import Missions from './pages/MissionsPage';
 import Profile from './pages/ProfilePage';
 import Layout from './components/layout/Layout';
