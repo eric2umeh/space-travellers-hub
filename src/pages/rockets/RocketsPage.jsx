@@ -11,6 +11,7 @@ const Rockets = () => {
   useEffect(() => {
     dispatch(fetchRocketsData());
   }, [dispatch]);
+
   return (
     <section className={classes.rocket__list}>
       {rockets.map((item) => (

@@ -26,7 +26,7 @@ const RocketsItem = ({ item }) => {
         {item.reserved ? (
           <button
             type="button"
-            className="rocket__info-btn"
+            className="rocket__info-btn cancel"
             onClick={cancelHandler}
           >
             Cancel Rocket
