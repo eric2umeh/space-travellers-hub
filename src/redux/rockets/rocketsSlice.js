@@ -18,7 +18,7 @@ export const fetchRocketsData = createAsyncThunk(
       rocket_description: rocket.description,
     }));
     return results;
-  }
+  },
 );
 
 const initialState = {
@@ -55,4 +55,4 @@ const rockets = createSlice({
 
 export default rockets;
 
-export const { reserveRocket, cancelReservation } = rockets.actions;
+export const { reserveRocket, cancelRocket } = rockets.actions;
