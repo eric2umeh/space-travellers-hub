@@ -39,7 +39,7 @@
   display: inline-block;
 }
 
-/* Mobile Views */
+/* Mobile View */
 @media only screen and (max-width: 768px) {
   .rocket__info-image {
     width: 40%;
