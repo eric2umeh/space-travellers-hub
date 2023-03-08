@@ -48,4 +48,4 @@ const rockets = createSlice({
 
 export default rockets;
 
-export const { reserveRocket, cancelReservation } = rockets.actions;
+export const { reserveRocket, cancelRocket } = rockets.actions;

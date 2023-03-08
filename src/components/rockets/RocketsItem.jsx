@@ -9,6 +9,7 @@ const RocketsItem = ({ item }) => {
   const reserveHandler = () => {
     dispatch(reserveRocket(item.rocket_id));
   };
+  
   return (
     <div className="rocket__info">
       <img
