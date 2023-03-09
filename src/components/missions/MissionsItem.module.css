@@ -71,8 +71,8 @@
 }
 
 .btn_leavemission {
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #f00;
+  color: #f00;
   padding: 10px 15px;
 }
 
@@ -83,5 +83,5 @@
 
 .btn_leavemission:hover {
   color: #fff;
-  background-color: red;
+  background-color: #f00;
 }

@@ -1,8 +1,11 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { missionsActions } from '../../redux/missions/missionsSlice';
 import classes from './MissionsItem.module.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions.missions);
+  const dispatch = useDispatch();
   let missionsContent = <p>There is no Mission content</p>;
   if (missions.length > 0) {
     missionsContent = (
@@ -33,7 +36,11 @@ const Missions = () => {
                     Leave Mission
                   </button>
                 ) : (
-                  <button className={classes.btn_join_mission} type="button">
+                  <button
+                    onClick={() => dispatch(missionsActions.joinMission(mission.mission_id))}
+                    className={classes.btn_join_mission}
+                    type="button"
+                  >
                     Join Mission
                   </button>
                 )}
