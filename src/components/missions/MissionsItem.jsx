@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
+
 import { missionsActions } from '../../redux/missions/missionsSlice';
 import classes from './MissionsItem.module.css';
 
@@ -36,7 +37,7 @@ const Missions = () => {
                   </button>
                 ) : (
                   <button
-                    onClick={() => dispatch(missionsActions.joinMissionAction(mission.mission_id))}
+                    onClick={() => dispatch(missionsActions.joinMission(mission.mission_id))}
                     className={classes.btn_join_mission}
                     type="button"
                   >
