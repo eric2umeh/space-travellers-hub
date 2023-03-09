@@ -1,6 +1,6 @@
 .my_profile_section {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   color: #333;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .profile_items {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   list-style: none;
 }
 
