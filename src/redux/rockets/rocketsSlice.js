@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -16,6 +15,7 @@ export const fetchRocketsData = createAsyncThunk(
       rocket_type: rocket.type,
       rocket_images: rocket.flickr_images,
       rocket_description: rocket.description,
+      reserved: false,
     }));
     return results;
   },
@@ -42,7 +42,7 @@ const rockets = createSlice({
         if (rocket.rocket_id !== action.payload) return rocket;
         return { ...rocket, reserved: false };
       });
-      return { ...state, rockets: [...newState2] };
+      return { rockets: [...newState2] };
     },
   },
   extraReducers: (builder) => {
