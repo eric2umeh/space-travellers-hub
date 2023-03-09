@@ -1,0 +1,35 @@
+.my_profile_section {
+  display: flex;
+  gap: 1.5rem;
+  color: #333;
+}
+
+.my_rockets {
+  width: 100%;
+  flex: 1;
+}
+
+.my_missions {
+  width: 100%;
+  flex: 1;
+}
+
+.my_rockets h3,
+.my_missions h3 {
+  color: #333;
+}
+
+.profile_items {
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.profile_items li {
+  padding: 15px 1rem;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+.profile_items li:last-child {
+  border-bottom: 1px solid #ccc;
+}
