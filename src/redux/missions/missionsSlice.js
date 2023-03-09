@@ -10,7 +10,7 @@ export const fetchMissionsData = createAsyncThunk(
       mission_id: mission.mission_id,
       mission_name: mission.mission_name,
       description: mission.description,
-      reversed: false,
+      reserved: false,
     }));
 
     return data;
@@ -25,19 +25,20 @@ const missions = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-    joinMissionAction(state, { payload }) {
+    joinMission(state, { payload }) {
       const newMissions = state.missions.map((mission) => {
         if (mission.mission_id === payload) {
           return {
             ...mission,
-            reversed: true,
+            reserved: true,
           };
         }
         return mission;
       });
+
       return { missions: [...newMissions] };
     },
-    leaveMissionAction(state, { payload }) {
+    leaveMission(state, { payload }) {
       const newMissions = state.missions.map((mission) => {
         if (mission.mission_id === payload) {
           return {
@@ -47,6 +48,7 @@ const missions = createSlice({
         }
         return mission;
       });
+
       return { missions: [...newMissions] };
     },
   },
