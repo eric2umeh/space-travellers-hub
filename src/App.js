@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Rockets from './pages/rockets/RocketsPage';
 import { fetchMissionsData } from './redux/missions/missionsSlice';
 import MissionsPage from './pages/missions/MissionsPage';
-import Profile from './pages/ProfilePage';
+import ProfilePage from './pages/profile/ProfilePage';
 import Layout from './components/layout/Layout';
 import './App.css';
 
