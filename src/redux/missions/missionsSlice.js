@@ -25,12 +25,24 @@ const missions = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-    joinMission(state, { payload }) {
+    joinMissionAction(state, { payload }) {
       const newMissions = state.missions.map((mission) => {
         if (mission.mission_id === payload) {
           return {
             ...mission,
             reversed: true,
+          };
+        }
+        return mission;
+      });
+      return { missions: [...newMissions] };
+    },
+    leaveMissionAction(state, { payload }) {
+      const newMissions = state.missions.map((mission) => {
+        if (mission.mission_id === payload) {
+          return {
+            ...mission,
+            reserved: false,
           };
         }
         return mission;

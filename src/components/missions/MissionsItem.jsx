@@ -6,6 +6,7 @@ import classes from './MissionsItem.module.css';
 const Missions = () => {
   const missions = useSelector((state) => state.missions.missions);
   const dispatch = useDispatch();
+
   let missionsContent = <p>There is no Mission content</p>;
   if (missions.length > 0) {
     missionsContent = (
@@ -24,20 +25,20 @@ const Missions = () => {
               <td className={classes.name}>{mission.mission_name}</td>
               <td className={classes.description}>{mission.description}</td>
               <td className={classes.status}>
-                {mission.reserved ? (
-                  <span>Active Member</span>
-                ) : (
-                  <span className={classes.not_a_member}>Not A Member</span>
-                )}
+                <span className={classes.not_a_member}>Not A Member</span>
               </td>
               <td className={classes.actions}>
                 {missions.reserved ? (
-                  <button className={classes.btn_leavemission} type="button">
+                  <button
+                    onClick={() => dispatch(missionsActions.leaveMissionAction(mission.mission_id))}
+                    className={classes.btn_leavemission}
+                    type="button"
+                  >
                     Leave Mission
                   </button>
                 ) : (
                   <button
-                    onClick={() => dispatch(missionsActions.joinMission(mission.mission_id))}
+                    onClick={() => dispatch(missionsActions.joinMissionAction(mission.mission_id))}
                     className={classes.btn_join_mission}
                     type="button"
                   >
