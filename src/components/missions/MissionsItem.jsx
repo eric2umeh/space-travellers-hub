@@ -1,4 +1,5 @@
-import { useSelector, useDispatch } from 'react-redux';
+// eslint-disable-next-line no-unused-vars
+import { useSelector, dispatch, useDispatch } from 'react-redux';
 
 import { missionsActions } from '../../redux/missions/missionsSlice';
 import classes from './MissionsItem.module.css';
@@ -6,7 +7,8 @@ import classes from './MissionsItem.module.css';
 const Missions = () => {
   const missions = useSelector((state) => state.missions.missions);
   const dispatch = useDispatch();
-  let missionsContent = <p>There is no Mission content</p>;
+
+  let missionsContent = <p>There is No Mission to render</p>;
   if (missions.length > 0) {
     missionsContent = (
       <table className={classes.table}>
@@ -15,7 +17,7 @@ const Missions = () => {
             <th>Mission</th>
             <th>Description</th>
             <th>Status</th>
-            <th>Actions</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody className={classes.table_body}>
@@ -31,8 +33,12 @@ const Missions = () => {
                 )}
               </td>
               <td className={classes.actions}>
-                {missions.reserved ? (
-                  <button className={classes.btn_leavemission} type="button">
+                {mission.reserved ? (
+                  <button
+                    onClick={() => dispatch(missionsActions.leaveMission(mission.mission_id))}
+                    className={classes.btn_leavemission}
+                    type="button"
+                  >
                     Leave Mission
                   </button>
                 ) : (
@@ -51,6 +57,7 @@ const Missions = () => {
       </table>
     );
   }
+
   return <div className={classes.container}>{missionsContent}</div>;
 };
 
