@@ -4,7 +4,7 @@ import axios from 'axios';
 export const fetchRocketsData = createAsyncThunk(
   'rockets/fetchRocketsData',
   async () => {
-    const response = await axios.get('https://api.spacexdata.com/v3/rockets');
+    const response = await axios.get('https://api.spacexdata.com/v4/rockets');
 
     if (response.status !== 200) return [];
 

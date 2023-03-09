@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import RocketsPage from './pages/rockets/RocketsPage';
 import Missions from './pages/MissionsPage';
 import ProfilePage from './pages/profile/ProfilePage';
 import Layout from './components/layout/Layout';
 import './App.css';
-// import { fetchRocketsData } from './redux/rockets/rocketsSlice';
+import { fetchRocketsData } from './redux/rockets/rocketsSlice';
 
 function App() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(fetchRocketsData());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchRocketsData());
+  }, [dispatch]);
 
   return (
     <Layout>

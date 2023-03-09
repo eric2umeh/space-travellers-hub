@@ -15,7 +15,7 @@ const Profile = () => {
   }
 
   return (
-    <section>
+    <section className={classes.my_profile_section}>
       <div className={classes.my_missions}>
         <h3>My Missions</h3>
         <ul className={classes.profile_items}>Missions Content</ul>

@@ -32,7 +32,7 @@ const RocketsItem = ({ item }) => {
         </div>
         {item.reserved ? (
           <button
-            type="button"
+            type="submit"
             className="rocket__info-btn cancel"
             onClick={cancelHandler}
           >
@@ -40,7 +40,7 @@ const RocketsItem = ({ item }) => {
           </button>
         ) : (
           <button
-            type="button"
+            type="submit"
             className="rocket__info-btn"
             onClick={reserveHandler}
           >
