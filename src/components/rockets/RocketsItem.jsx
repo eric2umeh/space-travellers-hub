@@ -2,12 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import './RocketsItem.css';
 import { useDispatch } from 'react-redux';
-import { reserveRocket } from '../../redux/rockets/rocketsSlice';
+import { reserveRocket, cancelRocket } from '../../redux/rockets/rocketsSlice';
 
 const RocketsItem = ({ item }) => {
   const dispatch = useDispatch();
   const reserveHandler = () => {
     dispatch(reserveRocket(item.rocket_id));
+  };
+  const cancelHandler = () => {
+    dispatch(cancelRocket(item.rocket_id));
   };
 
   return (
