@@ -1,11 +1,10 @@
-/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchRocketsData = createAsyncThunk(
   'rockets/fetchRocketsData',
   async () => {
-    const response = await axios.get('https://api.spacexdata.com/v3/rockets');
+    const response = await axios.get('https://api.spacexdata.com/v4/rockets');
 
     if (response.status !== 200) return [];
 
@@ -16,6 +15,7 @@ export const fetchRocketsData = createAsyncThunk(
       rocket_type: rocket.type,
       rocket_images: rocket.flickr_images,
       rocket_description: rocket.description,
+      reserved: false,
     }));
     return results;
   },
@@ -36,6 +36,13 @@ const rockets = createSlice({
         return { ...rocket, reserved: true };
       });
       return { rockets: [...newState] };
+    },
+    cancelRocket(state, action) {
+      const newState2 = state.rockets.map((rocket) => {
+        if (rocket.rocket_id !== action.payload) return rocket;
+        return { ...rocket, reserved: false };
+      });
+      return { rockets: [...newState2] };
     },
   },
   extraReducers: (builder) => {

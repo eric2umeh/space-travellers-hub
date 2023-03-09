@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Rockets from './pages/rockets/RocketsPage';
+import { useDispatch } from 'react-redux';
+import RocketsPage from './pages/rockets/RocketsPage';
 import MissionsPage from './pages/missions/MissionsPage';
-import Profile from './pages/ProfilePage';
+import ProfilePage from './pages/profile/ProfilePage';
 import Layout from './components/layout/Layout';
 import './App.css';
+import { fetchRocketsData } from './redux/rockets/rocketsSlice';
 
-const App = () => (
-  <div>
+function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchRocketsData());
+  }, [dispatch]);
+
+  return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Rockets />} />
+        <Route path="/" element={<RocketsPage />} />
         <Route path="/missions" element={<MissionsPage />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </Layout>
-  </div>
-);
+  );
+}
 
 export default App;
