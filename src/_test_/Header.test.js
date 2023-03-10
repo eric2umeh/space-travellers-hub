@@ -23,7 +23,7 @@ describe('Test Header component', () => {
       </BrowserRouter>,
     );
 
-    const text = screen.getByText("Space Traveller's Hub", { exact: false });
+    const text = screen.getByText("Space Traveler's Hub", { exact: false });
     expect(text).toBeInTheDocument();
   });
 });
