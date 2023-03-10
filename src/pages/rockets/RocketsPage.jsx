@@ -1,18 +1,6 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import RocketsItem from '../../components/rockets/RocketsItem';
-import classes from './Rockets.module.css';
+import Rockets from '../../components/rockets/Rockets';
 
-const Rockets = () => {
-  const rockets = useSelector((state) => state.rockets.rockets);
+const RocketsPage = () => <Rockets />;
 
-  return (
-    <section className={classes.rocket__list}>
-      {rockets.map((item) => (
-        <RocketsItem item={item} key={item.rocket_id} />
-      ))}
-    </section>
-  );
-};
-
-export default Rockets;
+export default RocketsPage;
