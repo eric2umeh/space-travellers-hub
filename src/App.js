@@ -19,16 +19,15 @@ const App = () => {
   useEffect(() => {
     dispatch(fetchRocketsData());
   }, [dispatch]);
+
   return (
-    <div>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Rockets />} />
-          <Route path="/missions" element={<MissionsPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-        </Routes>
-      </Layout>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Rockets />} />
+        <Route path="/missions" element={<MissionsPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+      </Routes>
+    </Layout>
   );
 };
 
