@@ -15,7 +15,7 @@ exports[`Test Header component header component should match with snapshot 1`] =
       >
         <img
           alt="Space Travlers"
-          src="logo.png"
+          src="space-travelers.png"
         />
       </div>
       <div

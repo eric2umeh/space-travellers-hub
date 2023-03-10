@@ -40,7 +40,7 @@ describe('Testing App component routes', () => {
   });
 
   test('should render Profile Page', () => {
-    ProfilePage.mockImplementation(() => <h1>Hello From MyProfile Page</h1>);
+    ProfilePage.mockImplementation(() => <h1>Hello From Profile Page</h1>);
     render(
       <MemoryRouter initialEntries={['/profile']}>
         <Provider store={store}>
@@ -48,7 +48,7 @@ describe('Testing App component routes', () => {
         </Provider>
       </MemoryRouter>,
     );
-    const text = screen.getByText('Hello From MyProfile Page');
+    const text = screen.getByText('Hello From Profile Page');
     expect(text).toBeInTheDocument();
   });
 });
