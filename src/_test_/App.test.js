@@ -6,7 +6,7 @@ import store from '../redux/store';
 
 import RocketsPage from '../pages/rockets/RocketsPage';
 import MissionsPage from '../pages/missions/MissionsPage';
-import MyProfilePage from '../pages/profile/ProfilePage';
+import ProfilePage from '../pages/profile/ProfilePage';
 
 jest.mock('../pages/rockets/RocketsPage');
 jest.mock('../pages/missions/MissionsPage');
@@ -40,7 +40,7 @@ describe('Testing App component routes', () => {
   });
 
   test('should render Profile Page', () => {
-    MyProfilePage.mockImplementation(() => <h1>Hello From MyProfile Page</h1>);
+    ProfilePage.mockImplementation(() => <h1>Hello From MyProfile Page</h1>);
     render(
       <MemoryRouter initialEntries={['/profile']}>
         <Provider store={store}>
