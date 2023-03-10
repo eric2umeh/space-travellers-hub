@@ -7,9 +7,14 @@ import ProfilePage from './pages/profile/ProfilePage';
 import Layout from './components/layout/Layout';
 import './App.css';
 import { fetchRocketsData } from './redux/rockets/rocketsSlice';
+import { fetchMissionsData } from './redux/missions/missionsSlice';
 
 function App() {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchMissionsData());
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(fetchRocketsData());
