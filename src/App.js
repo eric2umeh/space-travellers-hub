@@ -7,12 +7,17 @@ import MissionsPage from './pages/missions/MissionsPage';
 import ProfilePage from './pages/profile/ProfilePage';
 import Layout from './components/layout/Layout';
 import './App.css';
+import { fetchRocketsData } from './redux/rockets/rocketsSlice';
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchMissionsData());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(fetchRocketsData());
   }, [dispatch]);
   return (
     <div>

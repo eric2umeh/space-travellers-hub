@@ -5,5 +5,4 @@ const MissionsPage = () => (
     <Missions />
   </section>
 );
-
 export default MissionsPage;
