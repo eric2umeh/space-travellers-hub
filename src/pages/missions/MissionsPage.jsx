@@ -1,18 +1,15 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { fetchMissionsData } from '../../redux/missions/missionsSlice';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Missions from '../../components/missions/MissionsItem';
 
 const MissionsPage = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchMissionsData());
-  }, [dispatch]);
+  const missions = useSelector((state) => state.missions.missions);
 
   return (
     <section>
-      <Missions />
+      {missions.map((item) => (
+        <Missions item={item} key={item.mission_id} />
+      ))}
     </section>
   );
 };
