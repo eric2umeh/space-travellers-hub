@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing if rockets data is rendering component test 1`] = `
+<section
+  className="rocket__list"
+/>
+`;
