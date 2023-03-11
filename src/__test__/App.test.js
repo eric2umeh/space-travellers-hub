@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import App from '../App';
 import store from '../redux/store';
 
-import RocketsPage from '../pages/rockets/RocketsPage';
-import MissionsPage from '../pages/missions/MissionsPage';
+import RocketsPage from '../pages/RocketsPage';
+import MissionsPage from '../pages/MissionsPage';
 import ProfilePage from '../pages/profile/ProfilePage';
 
 jest.mock('../pages/rockets/RocketsPage');
@@ -20,7 +20,7 @@ describe('Testing App component routes', () => {
         <Provider store={store}>
           <App />
         </Provider>
-      </MemoryRouter>,
+      </MemoryRouter>
     );
     const text = screen.getByText('Hello From Rockets Page');
     expect(text).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe('Testing App component routes', () => {
         <Provider store={store}>
           <App />
         </Provider>
-      </MemoryRouter>,
+      </MemoryRouter>
     );
     const text = screen.getByText('Hello From Missions Page');
     expect(text).toBeInTheDocument();
@@ -46,7 +46,7 @@ describe('Testing App component routes', () => {
         <Provider store={store}>
           <App />
         </Provider>
-      </MemoryRouter>,
+      </MemoryRouter>
     );
     const text = screen.getByText('Hello From Profile Page');
     expect(text).toBeInTheDocument();

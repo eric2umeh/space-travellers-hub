@@ -1,5 +1,5 @@
 import React from 'react';
-import Rockets from '../../components/rockets/Rockets';
+import Rockets from '../components/rockets/Rockets';
 
 const RocketsPage = () => <Rockets />;
 

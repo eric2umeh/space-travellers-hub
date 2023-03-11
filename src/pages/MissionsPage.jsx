@@ -1,4 +1,4 @@
-import Missions from '../../components/missions/MissionsItem';
+import Missions from '../components/missions/MissionsItem';
 
 const MissionsPage = () => (
   <section>
