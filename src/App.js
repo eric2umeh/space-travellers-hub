@@ -13,11 +13,11 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMissionsData());
+    dispatch(fetchRocketsData());
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(fetchRocketsData());
+    dispatch(fetchMissionsData());
   }, [dispatch]);
 
   return (

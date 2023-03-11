@@ -8,8 +8,8 @@ import RocketsPage from '../pages/RocketsPage';
 import MissionsPage from '../pages/MissionsPage';
 import ProfilePage from '../pages/ProfilePage';
 
-jest.mock('../pages/rockets/RocketsPage');
-jest.mock('../pages/missions/MissionsPage');
+jest.mock('../pages/RocketsPage');
+jest.mock('../pages/MissionsPage');
 jest.mock('../pages/ProfilePage');
 
 describe('Testing App component routes', () => {
