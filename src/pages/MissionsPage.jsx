@@ -1,8 +1,8 @@
-import Missions from '../components/missions/MissionsItem';
+import MissionsItem from '../components/missions/MissionsItem';
 
 const MissionsPage = () => (
-  <section>
-    <Missions />
-  </section>
+  <div>
+    <MissionsItem />
+  </div>
 );
 export default MissionsPage;
