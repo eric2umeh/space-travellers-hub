@@ -1,0 +1,47 @@
+.rocket__info {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.rocket__info-image {
+  width: 300px;
+}
+
+.rocket__info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.rocket__info-btn {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #007aff;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+
+.cancel {
+  background-color: transparent;
+  color: gray;
+  border: 1px solid gray;
+}
+
+.rocket__info-reserved {
+  background-color: #18a2b8;
+  color: white;
+  border-radius: 5px;
+  padding: 0 5px;
+  margin-right: 10px;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+  .rocket__info-image {
+    width: 40%;
+  }
+}

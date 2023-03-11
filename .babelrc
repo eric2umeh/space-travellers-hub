@@ -1,0 +1,11 @@
+// 20230213171141
+// https://raw.githubusercontent.com/microverseinc/linters-config/master/react-redux/.babelrc
+
+{
+    "presets": [
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-syntax-jsx"
+    ]
+  }
