@@ -74,10 +74,10 @@ Install this project with:
 # Usage:
 ### To run the project, execute the following command:
   ```sh 
-  git clone https://github.com/Anand8317/Spacehub.git
+  git clone https://github.com/Anand8317/space-travellers-hub.git
   ```
   ```sh 
-  cd Spacehub
+  cd space-travellers-hub
   ```
   ```sh 
   npm install
