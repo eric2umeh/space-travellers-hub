@@ -2,7 +2,7 @@
 import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Header from '../components/layout/Header';
+import Header from './layout/Header';
 
 describe('Test Header component', () => {
   test('header component should match with snapshot', () => {

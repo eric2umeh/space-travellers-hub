@@ -2,7 +2,7 @@
 import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Layout from '../components/layout/Layout';
+import Layout from './layout/Layout';
 
 describe('Test Layout component', () => {
   test('should match with snapshot', () => {

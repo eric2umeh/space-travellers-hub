@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import store from '../redux/store';
-import RocketsItem from '../components/rockets/RocketsItem';
+import RocketsItem from '../components/rocketsItem/RocketsItem';
 
 it('test if the rocket component is rendering', () => {
   const item = {

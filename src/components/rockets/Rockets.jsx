@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import RocketsItem from '../rocketsItem/RocketsItem';
 import classes from './Rockets.module.css';
-import RocketsItem from './RocketsItem';
 
 const Rockets = () => {
   const rockets = useSelector((state) => state.rockets.rockets);
