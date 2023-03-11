@@ -42,7 +42,7 @@ The application that provides commercial and scientific space travel services. I
 
 # 🚀 Live Demo <a name="live-demo"></a>
 
-- Not Available
+- Not Available Yet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,10 +74,10 @@ Install this project with:
 # Usage:
 ### To run the project, execute the following command:
   ```sh 
-  git clone https://github.com/Anand8317/Spacehub.git
+  git clone https://github.com/Anand8317/space-travellers-hub.git
   ```
   ```sh 
-  cd Spacehub
+  cd Space Travellers Hub
   ```
   ```sh 
   npm install
