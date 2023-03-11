@@ -10,14 +10,14 @@ const Profile = () => {
 
   const reservedRockets = rockets.filter((rocket) => rocket.reserved !== false);
 
-  let missionsContents = <p>No Missions Found! Please join a new one</p>;
+  let missionsContents = <p>No Missions Found! Please add a new one</p>;
   if (reservedMissions.length > 0) {
     missionsContents = reservedMissions.map((mission) => (
       <li key={mission.mission_id}>{mission.mission_name}</li>
     ));
   }
 
-  let rocketsContents = <p>No Rockets Found! Please reserved a new one!</p>;
+  let rocketsContents = <p>No Rockets Found, please reserve a new one!</p>;
   if (reservedRockets.length > 0) {
     rocketsContents = reservedRockets.map((rocket) => (
       <li key={rocket.rocket_id}>{rocket.rocket_name}</li>
