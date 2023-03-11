@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import { useSelector, dispatch, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { missionsActions } from '../../redux/missions/missionsSlice';
 import classes from './MissionsItem.module.css';
